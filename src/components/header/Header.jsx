@@ -13,6 +13,9 @@ class Header extends Component {
                 <div className='headerPlus' onClick={showCreateItem}>+</div>
                <div>ToDoShechka</div> 
                <div>привет</div>
+               <div>привет</div>
+               <div>привет</div>
+               
             </div>
         );
     }
