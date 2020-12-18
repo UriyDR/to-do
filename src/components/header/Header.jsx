@@ -15,7 +15,7 @@ class Header extends Component {
                <div>привет</div>
                <div>привет</div>
                <div>привет</div>
-               vbbghjvbhjbhjhbgvj
+               vbbghjvbhjbhjhbgvj vbbghjvbhjbhjhbgvj vbbghjvbhjbhjhbgvj vbbghjvbhjbhjhbgvj
                
             </div>
         );
