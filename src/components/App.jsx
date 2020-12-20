@@ -21,18 +21,34 @@ class App extends Component {
     }
   }
 
+  deleteItem = (id) => {
+    const { items } = this.state;
+
+    this.setState({ 
+      items: items.filter(item => item.id !== id)
+    });
+  }
+
   createItem = () => {
     const { items } = this.state;
+
+    // Временный костыль
+    const itemsSize = items.length;
     
-    items.push({ text: 'Type here...' });
+    items.push({
+      id: itemsSize,
+      text: 'Type here...'
+    });
     this.setState({ items });
   } 
-  
+
   render() {
+    const { items } = this.state;
+
     return (
       <div className= 'content'>
-        <Header showCreateItem={this.createItem}/>
-        <List items={this.state.items}/>
+        <Header createItem={this.createItem}/>
+        <List items={items} deleteItem={this.deleteItem}/>
       </div>
     );
   }

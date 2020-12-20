@@ -9,7 +9,7 @@ class List extends Component{
     render(){
         return (
             <div className='list'>
-                {this.props.items.map((item) => <ListItem data={item}/>)}
+                {this.props.items.map((item) => <ListItem item={item} deleteItem={this.props.deleteItem}/>)}
             </div>
         )
     }
@@ -20,7 +20,9 @@ List.defaultProps = {
 }
 
 List.propTypes = {
-    items: PropTypes.arrayOf(Object)
+    items: PropTypes.arrayOf(Object),
+
+    deleteItem: PropTypes.func.isRequired
 };
 
 export default List;

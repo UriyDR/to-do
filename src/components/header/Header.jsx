@@ -6,24 +6,19 @@ import './Header.css';
 
 class Header extends Component {
     render (){
-        const {  showCreateItem }=this.props; 
+        const { createItem }=this.props; 
 
         return(
             <div className= 'header'>
-                <div className='headerPlus' onClick={showCreateItem}>+</div>
+                <div className='headerPlus' onClick={createItem}>+</div>
                <div>ToDoShechka</div> 
-               <div>привет</div>
-               <div>привет</div>
-               <div>привет</div>
-               vbbghjvbhjbhjhbgvj vbbghjvbhjbhjhbgvj vbbghjvbhjbhjhbgvj vbbghjvbhjbhjhbgvj
-               
-            </div>
+           </div>
         );
     }
 }
 
 Header.propTypes={
-    showCreateItem: PropTypes.func.isRequired
+    createItem: PropTypes.func.isRequired
 }
 
 export default Header;
