@@ -34,9 +34,10 @@ class ListItem extends Component {
                 {`Value: ${item.value}`}
                 {`Text: ${item.text}`}
                 <div className='deleteItem' onClick={() => deleteItem(item.id)}>x</div>
-                <div className='doneTask' onClick= {this.changeColor}>DONE</div>
-            </div>
-        );
+                <div className='doneTask' onClick= {this.changeColor}>
+                    {done ? (<span>UNDONE</span>) : (<span>DONE</span>)}
+                </div>        
+            </div>);
     }
 }
 

@@ -18,9 +18,14 @@
 }
 
 .doneTask{
-    text-align: center;
-    width:50px;
+    float: left;
+    font-size:15px;
     color: black; 
     cursor: pointer;
     border: 1px solid black;
+}
+
+.doneTask:hover{
+    background-color: green;
+    color: red;
 }
