@@ -10,8 +10,8 @@ class Header extends Component {
 
         return(
             <div className= 'header'>
-                <div className='headerPlus' onClick={createItem}>+</div>
-               <div>ToDoShechka</div> 
+                <div className='headerPlus' onClick={createItem}><span className='headerPlusSpan'>+</span></div>
+               <div className='headerToDo'>ToDoShechka</div> 
            </div>
         );
     }

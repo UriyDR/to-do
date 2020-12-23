@@ -1,24 +1,35 @@
 .item{
     width:100%;
     height:50px;
-    background-color: yellow;
-    margin-bottom: 5px;
+    background-color: rgba(247, 202, 10, .5);
+    margin: 5px 0;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
 }
 
 .item.done{
     background-color:green; 
+    transition: .5s;
 }
 
 .deleteItem{
     font-size: 25px;
-    color: red; 
-    float: right;
+    font-weight: bold;
+    color: red;
     cursor: pointer;
+    margin-right: 2%;
     border: 1px solid red;
+    border-radius: 50%;
+}
+
+.deleteItem:hover{
+    background: green;
+
 }
 
 .doneTask{
-    float: left;
+    margin-left: 2%;
     font-size:15px;
     color: black; 
     cursor: pointer;
@@ -28,4 +39,5 @@
 .doneTask:hover{
     background-color: green;
     color: red;
+    transition: .5s;
 }
