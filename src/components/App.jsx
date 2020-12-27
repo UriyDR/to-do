@@ -25,7 +25,7 @@ class App extends Component {
     const { items } = this.state;
 
     this.setState({ 
-      items: items.filter(item => item.id !== id)
+      items: items.filter(item => item.id !== id),
     });
   }
 
