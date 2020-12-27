@@ -10,7 +10,7 @@ export default function reducer(state = initialState, action) {
     switch (action.type) {
         case CREATE_ITEM:
             // Временный костыль
-            const newItemId = items.length;
+            const newItemId = state.itemsList.length;
             const items = state.itemsList.slice();
             items.push({
                 id: newItemId,
