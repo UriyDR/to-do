@@ -48,7 +48,7 @@ ListItem.propTypes = {
     item: PropTypes.object,
     editMode: PropTypes.bool,
 
-    updateItemData: PropTypes.func.isRequired,
+    updateItem: PropTypes.func.isRequired,
     deleteItem: PropTypes.func.isRequired
 }
 
