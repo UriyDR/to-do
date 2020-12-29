@@ -34,6 +34,7 @@ class ListItem extends Component {
                 <div className='doneTask' onClick= {this.changeColor}>
                     {done ? (<span>UNDONE</span>) : (<span>DONE</span>)}
                 </div>   
+                <input className='inputText' type="text"/>
                 <div className='deleteItem' onClick={() => deleteItem(item.id)}>x</div>     
             </div>);
     }

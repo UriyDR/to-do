@@ -5,12 +5,6 @@ import List from './list/List.container';
 
 import './App.css';
 
-/**
- * {
- *   "text": "Some text"
- * }
- */
-
 class App extends Component {
 
   render() {

@@ -18,7 +18,8 @@
     font-size: 25px;
     font-weight: bold;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 10px;
+    line-height: 40px;
 }
 
 .deleteItem:hover{
@@ -38,4 +39,10 @@
 .doneTask:hover{
     color: red;
     transition: .3s;
+}
+
+.inputText{
+    width: 70%;
+    background: rgba(248, 222, 108, 0.5);
+    font-size: 20px;
 }

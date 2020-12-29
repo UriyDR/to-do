@@ -22,7 +22,7 @@ export default function reducer(state = initialState, action) {
                 itemsList: items
             }
         case UPDATE_ITEM:
-            // СДЕЛАЙ САМ
+            
             return {
                 ...state,
                 // itemsList: 
@@ -30,7 +30,7 @@ export default function reducer(state = initialState, action) {
         case DELETE_ITEM:
             return {
                 ...state,
-                itemsList: state.itemsList.filter(item => item.id !== action.itemId)
+                itemsList: state.itemsList.filter(item => item.id!== action.itemId)
             }
         default: 
             return state;
