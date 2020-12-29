@@ -10,34 +10,32 @@
 
 .item.done{
     background-color:green; 
+    opacity: .8;
     transition: .5s;
 }
 
 .deleteItem{
     font-size: 25px;
     font-weight: bold;
-    color: red;
     cursor: pointer;
-    margin-right: 2%;
-    border: 1px solid red;
-    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .deleteItem:hover{
-    background: green;
-
+    color: red;
+    transition: .3s;
 }
 
 .doneTask{
-    margin-left: 2%;
-    font-size:15px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: 20px;
+    font-size:20px;
     color: black; 
     cursor: pointer;
-    border: 1px solid black;
 }
 
 .doneTask:hover{
-    background-color: green;
     color: red;
-    transition: .5s;
+    transition: .3s;
 }
