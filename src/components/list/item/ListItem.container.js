@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { updateItem, deleteItem, updateItemsText, updateItemsStatus, createNewItem } from '../../../store/actionCreators/todos.actionCreators';
+import { updateItem, deleteItem, updateItemsText, updateItemsStatus } from '../../../store/actionCreators/todos.actionCreators';
 
 import ListItem from './ListItem';
 
@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch) => ({
     updateItem: (item) => dispatch(updateItem(item)),
     deleteItem: (id) => dispatch(deleteItem(id)),
     updateItemsStatus: (id, status) => dispatch(updateItemsStatus(id, status)),
-    createNewItem: () => dispatch(createNewItem()),
+    // createNewItem: () => dispatch(createNewItem()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListItem);

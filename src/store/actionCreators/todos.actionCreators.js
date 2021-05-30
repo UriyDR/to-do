@@ -39,7 +39,8 @@ export const deleteItem = (itemId) => ({
     itemId
 });
 
-export const createNewItem = () => ({
+export const createNewItem = (data) => ({
     type: CREATE_NEW_ITEM,
+    data
 
 });

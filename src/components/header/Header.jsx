@@ -23,7 +23,7 @@ class Header extends Component {
 
     //     })
 
-    // получаем с базы и выводи в консоль лог. 
+   
     axios.post(`http://localhost:8080/api/first/nafront`, 
         config
     ).then(prb => {
@@ -38,6 +38,24 @@ class Header extends Component {
     }
 
   
+   createNewItemOnServer = () => {
+        
+        axios.post(`http://localhost:8080/api/first/create-new-item`,
+            stringify({}), {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            }
+        }
+        ).then(prb => {
+            let payload = prb.data;
+            if (typeof payload.result === 'object') {
+                const { createNewItem } = this.props;
+                createNewItem(payload.result);
+            } else {
+                console.log("Error on create item!");
+            }
+        })
+    }
 
 
     render (){
@@ -45,7 +63,7 @@ class Header extends Component {
 
         return(
             <div className= 'header'>
-                <div className='headerPlus' onClick={createNewItem}><span className='headerPlusSpan'>+</span></div>
+                <div className='headerPlus' onClick={() => this.createNewItemOnServer()}><span className='headerPlusSpan'>+</span></div>
                <div className='headerToDo'>ToDoShechka</div> 
            </div>
         );
@@ -53,7 +71,7 @@ class Header extends Component {
 }
 
 Header.propTypes={
-    createItem: PropTypes.func.isRequired
+    createNewItem: PropTypes.func.isRequired
 }
 
 export default Header;

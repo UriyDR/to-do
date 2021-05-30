@@ -38,7 +38,7 @@ export default function reducer(state = initialState, action) {
                 itemsList: items_
             }
         case UPDATE_ITEMS_TEXT:
-            console.log(action.id + " " + action.text);
+            // console.log(action.id + " " + action.text);
 
             return {
                 ...state,
@@ -59,7 +59,7 @@ export default function reducer(state = initialState, action) {
         case CREATE_NEW_ITEM:
             return {
                 ...state,
-
+                itemsList: [action.data].concat(state.itemsList)
             }
 
         case UPDATE_ITEMS_STATUS:
@@ -79,12 +79,9 @@ export default function reducer(state = initialState, action) {
                     return item;
                 })
             }
-        case UPDATE_ITEM:
 
-            return {
-                ...state,
 
-            }
+
         case DELETE_ITEM:
             return {
                 ...state,

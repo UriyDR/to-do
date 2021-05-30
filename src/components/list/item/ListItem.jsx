@@ -56,31 +56,6 @@ class ListItem extends Component {
         })
     }
 
-
-    createNewItemOnServer = () => {
-        
-        axios.post(`http://localhost:8080/api/first/creat-new-item`,
-            stringify({
-                text:
-                    ' '
-            }), {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-            }
-        }
-        ).then(prb => {
-            let payload = prb.data;
-            if (payload.result === true) {
-                const { createnewitem } = this.props;
-                createnewitem();
-            } else {
-                console.log("Error on create item!");
-            }
-        })
-    }
-
-
-
     changeTextOnServer = (id, text) => {
         axios.post(`http://localhost:8080/api/first/update-item`,
             stringify({
@@ -117,7 +92,8 @@ class ListItem extends Component {
                 <div className='doneTask' onClick={() => this.changeColor(item.id)}>
                     {item.is_done === "1" ? (<span>UNDONE</span>) : (<span>DONE</span>)}
                 </div>
-                <input className='inputText' type="text" onBlur={(text) => this.changeTextOnServer(item.id, text.target.value)} onChange={(text) => updateItemsText(item.id, text.target.value)} value={item.text} />
+                <input className='inputText' type="text" onBlur={(text) => this.changeTextOnServer(item.id, text.target.value)} 
+                onChange={(text) => updateItemsText(item.id, text.target.value)} value={item.text} />
                 <div className='deleteItem' onClick={() => this.deleteitemOnServer(item.id)}>x</div>
             </div>);
     }
